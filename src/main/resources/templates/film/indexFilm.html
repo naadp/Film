@@ -1,0 +1,18 @@
+<meta charset="UTF-8"></meta>
+<div id="f">
+	<div class="data_list">
+		<div class="data_list_title">
+		<img src="/static/images/hot_icon.png"></img>
+		热门电影</div>
+		<div class="datas imageDatas">
+			<ul class="imageUl">
+			  	  <li class="imageLi" th:each="newestIndexHotFilm:${application.newestIndexHotFilmList}">
+			  	  	<a target="_blank" th:href="'/film/'+${newestIndexHotFilm.id}" th:title="${newestIndexHotFilm.name}">
+			  	  		<img class="indexFilm" th:src="'/static/filmImage/'+${newestIndexHotFilm.imageName}"></img>
+			  	 	 	<p th:text="${newestIndexHotFilm.name}"></p>
+			  	  	</a>
+				  </li>
+			</ul>
+		</div>
+	</div>
+</div>
